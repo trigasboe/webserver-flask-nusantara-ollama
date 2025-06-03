@@ -1,0 +1,168 @@
+/* static/style.css */
+/* File CSS untuk mengatur tampilan visual halaman chat. */
+/* Menggunakan CSS Custom Properties (variabel) yang didefinisikan di index.html */
+
+/* Pengaturan dasar untuk body halaman */
+body {
+    background-color: var(--bg-color); /* Warna latar dari variabel */
+    color: var(--text-color);           /* Warna teks dari variabel */
+    font-family: var(--font-family);    /* Font dari variabel */
+    font-size: var(--font-size-general);/* Ukuran font dari variabel */
+    margin: 0;                          /* Hilangkan margin default browser */
+    display: flex;                      /* Gunakan flexbox untuk centering */
+    justify-content: center;            /* Pusatkan konten secara horizontal */
+    align-items: center;                /* Pusatkan konten secara vertikal */
+    min-height: 100vh;                  /* Tinggi minimal sama dengan tinggi viewport */
+    padding: 10px;                      /* Padding agar konten tidak menempel di tepi layar */
+    box-sizing: border-box;             /* Padding dan border dihitung dalam total width/height */
+}
+
+/* Styling untuk kontainer utama aplikasi (main-frame) */
+#main-frame {
+    width: 100%;                        /* Lebar penuh kontainer induk */
+    max-width: 700px;                   /* Lebar maksimal (sesuai deskripsi Tkinter 700x500) */
+    height: clamp(450px, 90vh, 650px);  /* Tinggi responsif: min 450px, 90% viewport, maks 650px */
+                                        /* Ini lebih fleksibel daripada ukuran tetap 500px */
+    background-color: var(--bg-color);  /* Warna latar utama frame */
+    padding: 15px;                      /* Padding internal (jarak tepi) */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35); /* Bayangan untuk efek kedalaman */
+    border-radius: 10px;                 /* Sudut yang membulat */
+    display: flex;                      /* Gunakan flexbox untuk layout internal */
+    flex-direction: column;             /* Susun elemen anak secara vertikal */
+    overflow: hidden;                   /* Mencegah konten keluar dari border-radius */
+}
+
+/* Styling untuk kontainer area chat (memungkinkan scrolling) */
+#chat-area-container {
+    flex-grow: 1;                       /* Mengisi sisa ruang vertikal di main-frame */
+    background-color: var(--entry-bg);  /* Warna latar area obrolan (sesuai self.entry_bg) */
+    padding: 12px;                      /* Padding internal (sesuai padx, pady) */
+    margin-bottom: 12px;                /* Jarak ke input-frame di bawahnya */
+    border-radius: 6px;                 /* Sudut membulat */
+    overflow-y: auto;                   /* Aktifkan scrollbar vertikal jika konten melebihi area */
+    border: 1px solid var(--text-color);/* Garis batas (mirip highlightthickness) */
+    line-height: 1.65;                   /* Jarak antar baris untuk keterbacaan yang lebih baik */
+}
+
+/* Styling untuk area di mana teks chat ditampilkan */
+#chat-area {
+    word-wrap: break-word;              /* Teks pindah baris jika melebihi batas (wrap=tk.WORD) */
+}
+
+/* Styling umum untuk setiap blok pesan (pengguna atau bot) */
+.message {
+    margin-bottom: 12px;                /* Jarak antar pesan */
+    padding-right: 5px;                 /* Padding kanan agar teks tidak terlalu dekat scrollbar */
+}
+.message:last-child {
+    margin-bottom: 0; /* Hilangkan margin bawah untuk pesan terakhir */
+}
+
+
+/* Styling untuk prefix "Anda: " */
+.user-prefix {
+    font-weight: bold;                  /* Font tebal */
+    color: var(--user-prefix-color);    /* Warna dari variabel (sesuai self.button_bg) */
+    font-size: var(--font-size-prefix); /* Ukuran font prefix */
+}
+
+/* Styling untuk prefix "Bot: " */
+.bot-prefix {
+    font-weight: bold;                  /* Font tebal */
+    color: var(--bot-prefix-color);     /* Warna hijau dari variabel */
+    font-size: var(--font-size-prefix); /* Ukuran font prefix */
+}
+
+/* Styling untuk teks pesan error */
+.error-message-text {
+    color: var(--error-color);          /* Warna merah dari variabel */
+    font-style: italic;                 /* Teks miring */
+}
+
+/* Styling untuk teks placeholder "[Sedang memproses...]" */
+.bot-placeholder-text {
+    color: var(--text-color);           /* Warna teks standar */
+    font-style: italic;                 /* Teks miring */
+}
+
+/* Styling untuk kontainer input pengguna */
+#input-frame {
+    display: flex;                      /* Susun input field dan tombol secara horizontal */
+    padding: 5px 0;                     /* Padding vertikal (mirip pady di input_frame Tkinter) */
+    background-color: var(--bg-color);  /* Warna latar sama dengan main_frame */
+}
+
+/* Styling untuk bidang input teks pengguna */
+#user-input-entry {
+    flex-grow: 1;                       /* Input field mengisi sisa ruang horizontal */
+    padding: 10px 14px;                 /* Padding internal (mirip ipady dan sedikit padx) */
+    background-color: var(--entry-bg);  /* Warna latar input (self.entry_bg) */
+    color: var(--text-color);           /* Warna teks input */
+    font-family: var(--font-family);
+    font-size: var(--font-size-general);
+    border: 1px solid var(--text-color);/* Garis batas (highlightbackground) */
+    border-radius: 6px;                 /* Sudut membulat */
+    margin-right: 10px;                 /* Jarak ke tombol kirim */
+    outline: none;                      /* Hilangkan outline default browser saat fokus */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Transisi halus untuk efek fokus */
+}
+
+/* Styling saat bidang input mendapat fokus */
+#user-input-entry:focus {
+    border-color: var(--button-bg);     /* Warna batas saat fokus (highlightcolor) */
+    box-shadow: 0 0 0 3px rgba(var(--button-bg), 0.25); /* Efek glow saat fokus */
+}
+
+/* Styling untuk tombol kirim */
+#send-button {
+    padding: 10px 20px;                 /* Padding internal tombol (padx, pady) */
+    background-color: var(--button-bg); /* Warna latar tombol (self.button_bg) */
+    color: var(--button-fg);            /* Warna teks tombol (self.button_fg) */
+    font-family: var(--font-family);
+    font-size: var(--font-size-general);
+    font-weight: bold;                  /* Font tebal untuk teks tombol */
+    border: none;                       /* Tanpa batas (relief=tk.FLAT) */
+    border-radius: 6px;                 /* Sudut membulat */
+    cursor: pointer;                    /* Ubah kursor menjadi tangan saat hover */
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Transisi halus */
+}
+
+/* Styling saat kursor mouse di atas tombol kirim */
+#send-button:hover {
+    background-color: #509bde;          /* Warna saat hover (activebackground) */
+}
+
+/* Styling saat tombol kirim ditekan */
+#send-button:active {
+    background-color: #408acb;          /* Warna saat tombol ditekan */
+    transform: translateY(1px);         /* Efek tombol ditekan sedikit ke bawah */
+}
+
+/* Styling saat tombol kirim nonaktif (disabled) */
+#send-button:disabled {
+    background-color: #4a5058;          /* Warna tombol saat nonaktif */
+    color: #777;                        /* Warna teks lebih pudar */
+    cursor: not-allowed;                /* Kursor menandakan tidak bisa diklik */
+    transform: none;                    /* Hilangkan efek transform saat disabled */
+}
+
+/* Styling untuk scrollbar (opsional, agar konsisten dengan tema gelap) */
+/* Hanya untuk browser berbasis WebKit (Chrome, Safari, Edge baru) */
+#chat-area-container::-webkit-scrollbar {
+    width: 10px;                        /* Lebar scrollbar */
+}
+
+#chat-area-container::-webkit-scrollbar-track {
+    background: var(--entry-bg);        /* Warna track scrollbar */
+    border-radius: 5px;                 /* Sudut membulat untuk track */
+}
+
+#chat-area-container::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);/* Warna thumb scrollbar */
+    border-radius: 5px;                 /* Sudut membulat untuk thumb */
+    border: 2px solid var(--entry-bg);  /* Memberi efek padding pada thumb */
+}
+
+#chat-area-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button-bg); /* Warna thumb saat hover */
+}

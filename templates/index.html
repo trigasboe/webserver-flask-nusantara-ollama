@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id"> <head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>{{ config.title }}</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <style>
+        :root {
+            --bg-color: {{ config.theme.bg_color }};
+            --text-color: {{ config.theme.text_color }};
+            --entry-bg: {{ config.theme.entry_bg }};
+            --button-bg: {{ config.theme.button_bg }};
+            --button-fg: {{ config.theme.button_fg }};
+            --user-prefix-color: {{ config.theme.user_prefix_color }};
+            --bot-prefix-color: {{ config.theme.bot_prefix_color }};
+            --error-color: {{ config.theme.error_color }};
+            --font-family: {{ config.theme.font_family }};
+            --font-size-general: {{ config.theme.font_size_general }};
+            --font-size-prefix: {{ config.theme.font_size_prefix }};
+        }
+    </style>
+</head>
+<body>
+    <div id="main-frame">
+        
+        <div id="chat-area-container">
+            <div id="chat-area">
+                </div>
+        </div>
+        
+        <div id="input-frame">
+            <input type="text" id="user-input-entry" placeholder="Ketik pesan Anda di sini..." autocomplete="off">
+            <button id="send-button">Kirim</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
