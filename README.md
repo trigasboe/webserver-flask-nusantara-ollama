@@ -24,7 +24,7 @@ Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara
              ![image](https://github.com/user-attachments/assets/4d18d8c0-406e-41cb-b1fa-15380a32b712)
              ![image](https://github.com/user-attachments/assets/66eaf3a3-f817-4109-994a-df52f860cf85)
 
-  5. Jalankan kode python main.py
+  6. Jalankan kode python main.py
      
 # Hasil
 ![image](https://github.com/user-attachments/assets/2610d81c-9d8c-4e42-9473-6d420d6b7649)
