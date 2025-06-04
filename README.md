@@ -20,7 +20,7 @@ Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara
  
   4. Download semua file dan folder, secara manual atau dengan menggunakan perintah git clone :
            - Unduh (Download) dan instal Git:  https://git-scm.com/downloads
-           - git clone https://github.com/trigasboe/webserver-flask-nusantara-ollama.git
+           - Ketikkan perintah (prompt): "git clone https://github.com/trigasboe/webserver-flask-nusantara-ollama.git" di CMD.
              ![image](https://github.com/user-attachments/assets/4d18d8c0-406e-41cb-b1fa-15380a32b712)
              ![image](https://github.com/user-attachments/assets/66eaf3a3-f817-4109-994a-df52f860cf85)
 
