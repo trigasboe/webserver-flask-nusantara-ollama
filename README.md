@@ -15,7 +15,7 @@ Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara
            - Bash: ollama run nusantara:0.8b-q8_0     ➡ Menjalankan model nusantara:0.8b-q8_0
            - Tuliskan sembarang kalimat perintah (prompt) untuk menguji model.
              ![image](https://github.com/user-attachments/assets/f273f244-9ec5-4b22-a2d3-d8ee71c8d039)
-  4. Download semua file dan folder, secara manual atau dengan menggunakan perintah git clone :\n
+  4. Download semua file dan folder, secara manual atau dengan menggunakan perintah git clone :
            - Unduh (Download) dan instal Git:  https://git-scm.com/downloads
            - 
   6.
