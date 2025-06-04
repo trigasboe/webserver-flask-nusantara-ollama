@@ -9,8 +9,8 @@ Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara
   
   3. Jalankan model nusantara: 
        - Running ollama yang sudah terinstal di windows.
-         ![image](https://github.com/user-attachments/assets/8c7a096f-5dde-41c1-a789-074feb44a65d)
-
+       ![image](https://github.com/user-attachments/assets/8c7a096f-5dde-41c1-a789-074feb44a65d)
+            
        - (Bisa melalui CMD windows) Ketik perintah:
            - Bash: ollama --version                   ➡ untuk melihat versi ollama
            - Bash: ollama list                        ➡ untuk melihat daftar model yang terintegrasi di ollama
@@ -19,8 +19,8 @@ Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara
              ![image](https://github.com/user-attachments/assets/f273f244-9ec5-4b22-a2d3-d8ee71c8d039)
  
   4. Download semua file dan folder, secara manual atau dengan menggunakan perintah git clone :
-           - Unduh (Download) dan instal Git:  https://git-scm.com/downloads
-           - Ketikkan perintah (prompt): "git clone https://github.com/trigasboe/webserver-flask-nusantara-ollama.git" di CMD.
+       -	Unduh (Download) dan instal Git:  https://git-scm.com/downloads
+       -	Ketikkan perintah (prompt): "git clone https://github.com/trigasboe/webserver-flask-nusantara-ollama.git" di CMD.
              ![image](https://github.com/user-attachments/assets/4d18d8c0-406e-41cb-b1fa-15380a32b712)
              ![image](https://github.com/user-attachments/assets/66eaf3a3-f817-4109-994a-df52f860cf85)
 
