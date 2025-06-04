@@ -2,7 +2,7 @@
 Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara dengan server lokal di Ollama. Respons teks dihasilkan secara real-time stream-on ke antarmuka pengguna web melalui Server-Sent Events (SSE), url: http://localhost:11434.
 
 # Langkah-Langkah:
-  1. Instal ollama. https://ollama.com/
+  1. Download dan install ollama. https://ollama.com/
   
   2. Create model LLM Nusantara dalam file Nusantara-0.8b-Indo-Chat-q8_0.gguf (kuantisasi 8 bit) atau Nusantara-0.8b-Indo-Chat-f16.gguf (kuantisasasi 16 bit)
      Referensi: https://github.com/trigasboe/ai-nusantara-in-ollama
