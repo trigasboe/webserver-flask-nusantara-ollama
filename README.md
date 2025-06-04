@@ -4,10 +4,11 @@ Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara
 # Langkah-Langkah:
   1. Download dan install ollama. https://ollama.com/
   
-  2. Create model LLM Nusantara dalam file Nusantara-0.8b-Indo-Chat-q8_0.gguf (kuantisasi 8 bit) atau Nusantara-0.8b-Indo-Chat-f16.gguf (kuantisasasi 16 bit)
-     Referensi: https://github.com/trigasboe/ai-nusantara-in-ollama
-  
-  3. Jalankan model nusantara: 
+  2. Create model LLM Nusantara dalam file: (Referensi: https://github.com/trigasboe/ai-nusantara-in-ollama)
+       - Nusantara-0.8b-Indo-Chat-q8_0.gguf (kuantisasi 8 bit) atau
+       - Nusantara-0.8b-Indo-Chat-f16.gguf  (kuantisasasi 16 bit)
+     
+    4. Jalankan model nusantara: 
        - Running ollama yang sudah terinstal di windows.
        ![image](https://github.com/user-attachments/assets/8c7a096f-5dde-41c1-a789-074feb44a65d)
             
@@ -18,7 +19,7 @@ Aplikasi web interaktif berbasis Python dan Flask menggunakan model AI nusantara
            - Tuliskan sembarang kalimat perintah (prompt) untuk menguji model.
              ![image](https://github.com/user-attachments/assets/f273f244-9ec5-4b22-a2d3-d8ee71c8d039)
  
-  4. Download semua file dan folder, secara manual atau dengan menggunakan perintah git clone :
+  5. Download semua file dan folder, secara manual atau dengan menggunakan perintah git clone :
        -	Unduh (Download) dan instal Git:  https://git-scm.com/downloads
        -	Ketikkan perintah (prompt): "git clone https://github.com/trigasboe/webserver-flask-nusantara-ollama.git" di CMD.
              ![image](https://github.com/user-attachments/assets/4d18d8c0-406e-41cb-b1fa-15380a32b712)
